@@ -21,3 +21,5 @@
 - **Paso 9** : Añade un archivo README.md a tu proyecto, explicando el funcionamiento de tu aplicación.✅
 
 - **Paso 10** : Añade PropTypes o Typescript a tu componente.✅
+
+PermaLink Netlify: https://enchanting-pegasus-2d52c5.netlify.app/
