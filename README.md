@@ -22,4 +22,7 @@
 
 - **Paso 10** : Añade PropTypes o Typescript a tu componente.✅
 
+- **Extras**
+    - Cambio el hook personalizado que utiliza useState, para utilizar useReducer, creo el reducer en un archivo aparte.✅
+
 PermaLink Netlify: https://enchanting-pegasus-2d52c5.netlify.app/
