@@ -1,30 +1,22 @@
-import { useState } from "react";
+import { useReducer } from "react";
+import { tareasReducer } from "../reducers/todoReducer";
 
 const useTareas = () => {
-  const [tareas, setTareas] = useState([]);
+  const [tareas, dispatch] = useReducer(tareasReducer, []);
 
   const addTask = (newTarea) => {
-    setTareas([...tareas, newTarea]);
+    dispatch({ type: "ADD_TASK", payload: newTarea });
   };
 
   const deleteTodo = (id) => {
-    setTareas(tareas.filter((tarea) => tarea.id !== id));
+    dispatch({ type: "DELETE_TASK", payload: id });
   };
 
   const doneTodo = (id) => {
-    setTareas(
-      tareas.map((tarea) =>
-        tarea.id === id ? { ...tarea, done: !tarea.done } : tarea
-      )
-    );
+    dispatch({ type: "TOGGLE_TASK", payload: id });
   };
 
-  return {
-    tareas,
-    addTask,
-    deleteTodo,
-    doneTodo,
-  };
+  return { tareas, addTask, deleteTodo, doneTodo };
 };
 
 export default useTareas;
